@@ -1,7 +1,7 @@
 // Store frame for motion functions
-var previousFrame;
+
 var paused = false;
-var pauseOnGesture = false;
+//var pauseOnGesture = false;
 var count=1;
 // Setup Leap loop with frame callback function
 var controllerOptions = {enableGestures: true};
@@ -10,29 +10,31 @@ Leap.loop(controllerOptions, function(frame) {
   if (paused) {
     return; // Skip this update
   }
-  // Display Hand object data
-  var handOutput = document.getElementById("handData");
-  
-  if (frame.hands.length > 0) {
-    for (var i = 0; i < frame.hands.length; i++) {
-      var hand = frame.hands[i];
-        
-        var handPosition = hand.palmPosition;
-        
-        var newyaxis = handPosition[1];
-        
-        //handString += "<div style='width:300px; float:left; padding:5px'>";
-        //handString += "Y Axis: " + newyaxis + " mm<br />";
-        //handString += "</div>";
-        
-        var yaxis = parseFloat(newyaxis);
-        var ymapped = proportion(yaxis, 600, 0, 255);
-        document.body.style.background = "rgba("+ymapped+", "+ymapped+", "+ymapped+", 1)";
+    var someData = document.getElementById("handData");
+    var volume = document.getElementById("volumeBar");
+    if (frame.hands.length > 0) {
+        for (var i = 0; i < frame.hands.length; i++) {
+            var hand = frame.hands[i];
+            var newV = hand.palmVelocity;
+            var velocity = newV[0];
+            velocity = parseFloat(velocity);
+            
+            if(velocity > 1500 && count < 100){
+                        volume.style.width= count+10+"em";
+                        count++;
+                    }
+              
+            if(velocity < (-1500) && count > 1){
+                        volume.style.width= count-10+"em";
+                        count--;
+                    }
+            
+        }
     }
-  }
     
     
-    
+    //this works for volume control just not very heuristically
+    /*
     var volumePart = document.getElementById("volumeBar");
   if (frame.gestures.length > 0) {
     if (pauseOnGesture) {
@@ -46,26 +48,28 @@ Leap.loop(controllerOptions, function(frame) {
               var newDirection = gesture.direction;
               var theDirection = newDirection[0];
               theDirection = parseFloat(theDirection);
-
-              var state = gesture.state;
               
-              if(theDirection > 0 && count < 8 && state=="stop"){
-                  volumePart.innerHTML = '<img src="img/1x/volume'+(count+1)+'.png">';
-                    count++;
-              }
               
-              if(theDirection < 0 && count > 1 && state=="stop"){
-                  volumePart.innerHTML = '<img src="img/1x/volume'+(count-1)+'.png">';
-                    count--;
-              }
+                    var state = gesture.state;
+              
+                    if(theDirection > 0 && count < 100 && state=="stop"){
+                        volumePart.style.width= count+20+"em";
+                        count++;
+                    }
+              
+                    if(theDirection < 0 && count > 1 && state=="stop"){
+                        volumePart.style.width= count-20+"em";
+                        count--;
+                    }
+                
+              
               
           break;
               
         default:
       }
     }
-  }
-  previousFrame = frame;
+  }*/
 })   //END OF LEAP LOOP
 
 

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+*,
+*:before,
+*:after{
+    margin:0;
+    padding:0;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    text-align: center;
+}
+
+header{
+    text-align:center;
+}
+
+#volumeBar{
+    padding: 1%;
+    background: black;
+    float: left;
+    height: 30em;
+    width: 0em;
+}

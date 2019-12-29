@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Future Motion</title>
+  <meta name="description" content="Wish List Search">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" media="all" href="css/fMotion.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- bootstrap just for better default styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<main>
+  <body>
+
+    <!-- top two nav items and clock -->
+      <div class="cont">
+        <div class="pageLogo" id="climate">
+          <img id="climateLogo" src="images/climate3D" alt="Climate page logo">
+        </div>
+        <div class="pageLogo" id="audio">
+          <img id="audioLogo" src="images/audio3D" alt="Audio page logo">
+        </div>
+        <div id="clock">00:00 PM</div>
+      </div>
+
+      <!-- main screen logo -->
+      <div class="center">
+        <!-- <img id="fMotionLogo" src="images/fMotionLogo.png" alt="Future Motion Logo"> -->
+      </div>
+      <!--These are the only components i added-->
+      <div id="volumeBar"></div>
+            <audio id="playing">
+                <source src="song.wav" type="audio/wav">
+            </audio>
+
+      <!-- bottom two nav items -->
+      <div class="contBottom">
+        <div class="pageLogo" id="navigation">
+          <img id="navigationLogo" src="images/navigation3D" alt="Navigation page logo">
+        </div>
+        <div class="pageLogo" id="settings">
+          <img id="settingsLogo" src="images/settings3D" alt="Settings page logo">
+        </div>
+      </div>
+
+
+      <!--leap.js is the script that makes it a lot easier to get all the data and runs the api-->
+      <script src="js/leap.js"></script>
+      <script src="js/fMotion.js"></script>
+  </body>
+</main>
+</html>

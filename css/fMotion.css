@@ -1,0 +1,61 @@
+main{
+  height: 1200px;
+  width:1000px;
+  position: relative;
+  background-color: #404040;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url("images/fMotionHome");
+
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 10%;
+}
+#fMotionLogo{
+  width:550px;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+#clock{
+  text-align: center;
+  color:white;
+  font-size: 300%;
+  font-weight:600;
+}
+.cont{
+  padding-top: 5%;
+  width:90%;
+  padding-left: 5%;
+}
+.contBottom{
+  position: absolute;
+  bottom: 0px;
+  width:90%;
+  padding-left: 5%;
+  margin-bottom:5%;
+}
+.pageLogo img{
+  height:125px;
+}
+#climate{
+  float:left;
+}
+#audio{
+  float:right;
+}
+#navigation{
+  float:left;
+}
+#settings{
+  float:right;
+}
+
+#volumeBar{
+    background: yellow;
+    float: left;
+    height: 30em;
+    width: 0px;
+}
