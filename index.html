@@ -32,11 +32,134 @@
       <div class="center">
         <!-- <img id="fMotionLogo" src="images/fMotionLogo.png" alt="Future Motion Logo"> -->
       </div>
+
+
+      <section id="navigationPage">
+        <div id="navigationMap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528.0206722109722!2d-105.27062034182332!3d40.007524049319706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDAwJzI3LjEiTiAxMDXCsDE2JzEwLjMiVw!5e0!3m2!1sen!2sus!4v1577744355345!5m2!1sen!2sus"frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <input type="text" id="directions">
+            <input type="button" value="Get Directions" id="the-button">
+        </div>
+        <div id="zoom" class="row">
+          <div class="col-sm-5 text-right">
+            <img id="" src="images/leftSwipe" alt="left icon for zoom control">
+          </div>
+          <div class="col-sm-2 text-center my-auto">
+            <img src="images/zoom" alt="icon for magnifying">
+          </div>
+          <div class="col-sm-5 text-left">
+            <img id="" src="images/rightSwipe" alt="right icon for zoom control">
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="climatePage">
+        <div class="container-fluid">
+            <div id="fan" class="row">
+              <div class="col-sm-3 text-right">
+                <img id="" src="images/leftSwipe" alt="left icon for fan speed">
+              </div>
+              <div class="col-sm-6 text-center my-auto">
+                <div class="outlineHoriz">
+                  <div id="fanBar" class="text-center"></div>
+                </div>
+              </div>
+              <div class="col-sm-3 text-left">
+                <img id="" src="images/rightSwipe" alt="right icon for fan speed">
+              </div>
+            </div>
+          <div class="text-center">
+            <img src="images/fan" alt="Icon for fan speed">
+          </div>
+          <div id="tempControl">
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-3 text-right my-auto">
+                <h2 id="tempurature">53° F</h2>
+              </div>
+              <div class="col-sm-3 text-center">
+                <div>
+                  <img src="images/upSwipe" alt="icon for higher volume">
+                </div>
+                <div class="outline">
+                  <div id="tempBar"></div>
+                </div>
+                <div>
+                  <img src="images/downSwipe" alt="icon for lower volume">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--These are the only components i added-->
-      <div id="volumeBar"></div>
-            <audio id="playing">
-                <source src="song.wav" type="audio/wav">
-            </audio>
+
+      <section id="audioPage" class="sectionPage">
+        <div class="container-fluid">
+          <div id="songControl" class="row">
+            <div class="col-sm-3 text-right">
+              <img id="backSongButton" src="images/leftSwipe" alt="icon for back song">
+            </div>
+            <div class="col-sm-6 text-center my-auto">
+              <h2 id="title">TITLE</h2>
+              <h3 id="artist">ARTIST</h3>
+            </div>
+            <div class="col-sm-3 text-left">
+              <img id="nextSongButton" src="images/rightSwipe" alt="icon for next song">
+            </div>
+          </div>
+          <div id="volControl">
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-3 text-right my-auto">
+                <h2 id="volume">0</h2>
+              </div>
+              <div class="col-sm-3 text-center">
+                <div>
+                  <img src="images/upSwipe" alt="icon for higher volume">
+                </div>
+                <div>
+                  <div class="outline">
+                    <div id="volumeBar"></div>
+                  </div>
+                </div>
+                <div>
+                  <img src="images/downSwipe" alt="icon for lower volume">
+                </div>
+              </div>
+            </div>
+          </div>
+                <audio id="playing0">
+                  <source id="song0" src="music/VanHalenHotforTeacher.wav" type="audio/wav">
+                </audio>
+                <audio id="playing1">
+                  <source id="song1" src="music/Cocaine.mp3" type="audio/wav">
+                </audio>
+                <audio id="playing2">
+                  <source id="song2" src="music/Girls,Girls,Girls.mp3" type="audio/wav">
+                </audio>
+                <audio id="playing3">
+                  <source id="song3" src="music/DreamOn.mp3" type="audio/wav">
+                </audio>
+                <audio id="playing4">
+                  <source id="song4" src="music/BackinBlack.mp3" type="audio/wav">
+                </audio>
+                <audio id="playing5">
+                  <source id="song5" src="music/GoYourOwnWay.mp3" type="audio/wav">
+                </audio>
+        </div>
+      </section>
+
+
+
+      <section id="settingsPage">
+        <div class="container">
+
+        </div>
+      </section>
 
       <!-- bottom two nav items -->
       <div class="contBottom">
