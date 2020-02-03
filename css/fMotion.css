@@ -67,7 +67,8 @@ main{
 #audio{
   float:right;
 }
-#audioPage img, #climatePage img, #navigationPage img{
+#audioPage img, #climatePage img, #navigationPage img,
+#brightnessPage img, #audioSettingsPage img{
   width: 120px;
   filter: drop-shadow(10px 10px 5px #222);
 
@@ -94,7 +95,7 @@ main{
 #songControl h3{
   font-size: 250%;
 }
-#volumeBar, #tempBar{
+#volumeBar, #tempBar, #trebleBar{
   margin: auto;
   width: 50%;
   margin-bottom: 20px;
@@ -108,8 +109,10 @@ main{
   padding-top: 5%;
   width:1000px;
 }
-
-#fanBar{
+#fanImg{
+  transition: .5s;
+}
+#fanBar, #bassBar{
   margin: auto;
   width: 50%;
   /* margin-top: 20px;
@@ -119,10 +122,20 @@ main{
   width:0px;
   float: left;
 }
+#brightBar{
+  margin: auto;
+  width: 50%;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  background:white;
+  height:210px;
+  width:220px;
+  float: left;
+}
 #tempControl{
   padding-top:5%;
 }
-#volControl h2, #tempControl h2{
+#volControl h2, #tempControl h2, #bass, #trebleControl h2, #clockSetting{
   color:white;
   font-weight: 600;
   font-size: 500%;
@@ -138,4 +151,425 @@ main{
 }
 #zoom{
   padding-top:5%;
+}
+#settingList{
+  /* padding-left: 20%; */
+  padding-top: 20%;
+}
+#settingsPage h2{
+  padding-left: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 600px;
+  border-bottom: 6px solid #8cd633;
+  line-height: 2;
+  font-size: 400%;
+  color:white;
+  font-weight: 500;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+.settingHighlight{
+  background-color: grey;
+}
+#brightnessPage{
+  width:100%;
+}
+#brightness{
+  padding-top: 30%;
+  margin-left: 0!important;
+}
+#brightnessImg{
+  padding-top: 5%;
+}
+#audioSettingsPage{
+  padding-top: 10%;
+}
+#clockSetting{
+  padding-top:30%;
+}
+main{
+  height: 1200px;
+  width:1000px;
+  position: relative;
+  background-color: #404040;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url("../images/fMotionHome");
+
+}
+.outline{
+  height:305px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width:thick;
+  border-color: white;
+}
+.outlineHoriz{
+  width:305px;
+  height:220px;
+  /* margin-right: 20px;
+  margin-left: 20px; */
+  margin: 0 auto;
+  border-style: solid;
+  border-width:thick;
+  border-color: white;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 10%;
+}
+#fMotionLogo{
+  width:550px;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+#clock{
+  text-align: center;
+  color:white;
+  font-size: 300%;
+  font-weight:600;
+}
+.cont{
+  padding-top: 5%;
+  width:90%;
+  padding-left: 5%;
+}
+.contBottom{
+  position: absolute;
+  bottom: 0px;
+  width:90%;
+  padding-left: 5%;
+  margin-bottom:5%;
+}
+.pageLogo img{
+  height:125px;
+}
+.sectionPage{
+  padding-top: 10%;
+}
+#climate{
+  float:left;
+}
+#audio{
+  float:right;
+}
+#audioPage img, #climatePage img, #navigationPage img,
+#brightnessPage img, #audioSettingsPage img{
+  width: 120px;
+  filter: drop-shadow(10px 10px 5px #222);
+
+}
+#navigation{
+  float:left;
+}
+#settings{
+  float:right;
+}
+#volControl{
+  padding-top: 10%;
+}
+#songControl h2, #songControl h3{
+  color:white;
+  font-weight: 500;
+  filter: drop-shadow(10px 10px 5px #222);
+
+}
+
+#songControl h2{
+  font-size: 350%;
+}
+#songControl h3{
+  font-size: 250%;
+}
+#volumeBar, #tempBar, #trebleBar{
+  margin: auto;
+  width: 50%;
+  margin-bottom: 20px;
+  background:white;
+  height:0px;
+  width:210px;
+  margin-top:0;
+}
+
+#fan{
+  padding-top: 5%;
+  width:1000px;
+}
+#fanImg{
+  transition: .5s;
+}
+#fanBar, #bassBar{
+  margin: auto;
+  width: 50%;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  background:white;
+  height:210px;
+  width:0px;
+  float: left;
+}
+#brightBar{
+  margin: auto;
+  width: 50%;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  background:white;
+  height:210px;
+  width:220px;
+  float: left;
+}
+#tempControl{
+  padding-top:5%;
+}
+#volControl h2, #tempControl h2, #bass, #trebleControl h2, #clockSetting{
+  color:white;
+  font-weight: 600;
+  font-size: 500%;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+#navigationMap{
+  padding-top:10%;
+}
+#navigationPage iframe{
+  width:980px;
+  height:600px;
+  padding-left:20px;
+}
+#zoom{
+  padding-top:5%;
+}
+#settingList{
+  /* padding-left: 20%; */
+  padding-top: 20%;
+}
+#settingsPage h2{
+  padding-left: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 600px;
+  border-bottom: 6px solid #8cd633;
+  line-height: 2;
+  font-size: 400%;
+  color:white;
+  font-weight: 500;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+.settingHighlight{
+  background-color: grey;
+}
+#brightnessPage{
+  width:100%;
+}
+#brightness{
+  padding-top: 30%;
+  margin-left: 0!important;
+}
+#brightnessImg{
+  padding-top: 5%;
+}
+#audioSettingsPage{
+  padding-top: 10%;
+}
+#clockSetting{
+  padding-top:30%;
+}
+
+main{
+  height: 1200px;
+  width:1000px;
+  position: relative;
+  background-color: #404040;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url("../images/fMotionHome");
+
+}
+.outline{
+  height:305px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width:thick;
+  border-color: white;
+}
+.outlineHoriz{
+  width:305px;
+  height:220px;
+  /* margin-right: 20px;
+  margin-left: 20px; */
+  margin: 0 auto;
+  border-style: solid;
+  border-width:thick;
+  border-color: white;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 10%;
+}
+#fMotionLogo{
+  width:550px;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+#clock{
+  text-align: center;
+  color:white;
+  font-size: 300%;
+  font-weight:600;
+}
+.cont{
+  padding-top: 5%;
+  width:90%;
+  padding-left: 5%;
+}
+.contBottom{
+  position: absolute;
+  bottom: 0px;
+  width:90%;
+  padding-left: 5%;
+  margin-bottom:5%;
+}
+.pageLogo img{
+  height:125px;
+}
+.sectionPage{
+  padding-top: 10%;
+}
+#climate{
+  float:left;
+}
+#audio{
+  float:right;
+}
+#audioPage img, #climatePage img, #navigationPage img,
+#brightnessPage img, #audioSettingsPage img{
+  width: 120px;
+  filter: drop-shadow(10px 10px 5px #222);
+
+}
+#navigation{
+  float:left;
+}
+#settings{
+  float:right;
+}
+#volControl{
+  padding-top: 10%;
+}
+#songControl h2, #songControl h3{
+  color:white;
+  font-weight: 500;
+  filter: drop-shadow(10px 10px 5px #222);
+
+}
+
+#songControl h2{
+  font-size: 350%;
+}
+#songControl h3{
+  font-size: 250%;
+}
+#volumeBar, #tempBar, #trebleBar{
+  margin: auto;
+  width: 50%;
+  margin-bottom: 20px;
+  background:white;
+  height:0px;
+  width:210px;
+  margin-top:0;
+}
+
+#fan{
+  padding-top: 5%;
+  width:1000px;
+}
+#fanImg{
+  transition: .5s;
+}
+#fanBar, #bassBar{
+  margin: auto;
+  width: 50%;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  background:white;
+  height:210px;
+  width:0px;
+  float: left;
+}
+#brightBar{
+  margin: auto;
+  width: 50%;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  background:white;
+  height:210px;
+  width:220px;
+  float: left;
+}
+#tempControl{
+  padding-top:5%;
+}
+#volControl h2, #tempControl h2, #bass, #trebleControl h2, #clockSetting{
+  color:white;
+  font-weight: 600;
+  font-size: 500%;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+#navigationMap{
+  padding-top:10%;
+}
+#navigationPage iframe{
+  width:980px;
+  height:600px;
+  padding-left:20px;
+}
+#zoom{
+  padding-top:5%;
+}
+#settingList{
+  /* padding-left: 20%; */
+  padding-top: 20%;
+}
+#settingsPage h2{
+  padding-left: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 600px;
+  border-bottom: 6px solid #8cd633;
+  line-height: 2;
+  font-size: 400%;
+  color:white;
+  font-weight: 500;
+  filter: drop-shadow(10px 10px 5px #222);
+}
+.settingHighlight{
+  background-color: grey;
+}
+#brightnessPage{
+  width:100%;
+}
+#brightness{
+  padding-top: 30%;
+  margin-left: 0!important;
+}
+#brightnessImg{
+  padding-top: 5%;
+}
+#audioSettingsPage{
+  padding-top: 10%;
+}
+#clockSetting{
+  padding-top:30%;
+}
+
+#navigationMap{
+  padding-top:18%;
+    height:800px;
+    color:white;
+    width:600px;
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -36,20 +35,6 @@
 
       <section id="navigationPage">
         <div id="navigationMap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528.0206722109722!2d-105.27062034182332!3d40.007524049319706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDAwJzI3LjEiTiAxMDXCsDE2JzEwLjMiVw!5e0!3m2!1sen!2sus!4v1577744355345!5m2!1sen!2sus"frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            <input type="text" id="directions">
-            <input type="button" value="Get Directions" id="the-button">
-        </div>
-        <div id="zoom" class="row">
-          <div class="col-sm-5 text-right">
-            <img id="" src="images/leftSwipe" alt="left icon for zoom control">
-          </div>
-          <div class="col-sm-2 text-center my-auto">
-            <img src="images/zoom" alt="icon for magnifying">
-          </div>
-          <div class="col-sm-5 text-left">
-            <img id="" src="images/rightSwipe" alt="right icon for zoom control">
-          </div>
         </div>
       </section>
 
@@ -71,7 +56,7 @@
               </div>
             </div>
           <div class="text-center">
-            <img src="images/fan" alt="Icon for fan speed">
+            <img id="fanImg" src="images/fan" alt="Icon for fan speed">
           </div>
           <div id="tempControl">
             <div class="row">
@@ -101,14 +86,14 @@
         <div class="container-fluid">
           <div id="songControl" class="row">
             <div class="col-sm-3 text-right">
-              <img id="backSongButton" src="images/leftSwipe" alt="icon for back song">
+              <img id="backSongButton" src="images/rewind.png" alt="icon for back song">
             </div>
             <div class="col-sm-6 text-center my-auto">
               <h2 id="title">TITLE</h2>
               <h3 id="artist">ARTIST</h3>
             </div>
             <div class="col-sm-3 text-left">
-              <img id="nextSongButton" src="images/rightSwipe" alt="icon for next song">
+              <img id="nextSongButton" src="images/forward.png" alt="icon for next song">
             </div>
           </div>
           <div id="volControl">
@@ -156,10 +141,90 @@
 
 
       <section id="settingsPage">
-        <div class="container">
+        <div class="row container">
+          <div class="col-sm-3">
 
+          </div>
+          <div id="settingList" class="col-sm-9">
+            <h2 id="brightnessSet">BRIGHTNESS</h2>
+            <h2 id="audioSet">AUDIO</h2>
+            <h2 id="clockSet">CLOCK</h2>
+            <!-- <h2 id="oneMoreSet">ONE MORE</h2> -->
+          </div>
         </div>
       </section>
+
+
+
+
+      <section id="brightnessPage">
+        <div class="container-fluid">
+          <div id="brightness" class="row">
+            <div class="col-sm-3 text-right my-auto">
+              <img id="" src="images/leftSwipe" alt="left icon for brightness">
+            </div>
+            <div class="col-sm-6 text-center my-auto">
+              <div class="outlineHoriz">
+                <div id="brightBar" class="text-center"></div>
+              </div>
+            </div>
+            <div class="col-sm-3 text-left my-auto">
+              <img id="" src="images/rightSwipe" alt="right icon for brightness">
+            </div>
+          </div>
+          <div class="text-center">
+            <img id="brightnessImg" src="images/brightness.png" alt="Icon for brightness">
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="audioSettingsPage">
+        <div class="container-fluid">
+            <div id="bassControl" class="row">
+              <div class="col-sm-3 text-right">
+                <img id="" src="images/leftSwipe" alt="left icon for fan speed">
+              </div>
+              <div class="col-sm-6 text-center my-auto">
+                <div class="outlineHoriz">
+                  <div id="bassBar" class="text-center"></div>
+                </div>
+              </div>
+              <div class="col-sm-3 text-left">
+                <img id="" src="images/rightSwipe" alt="right icon for fan speed">
+              </div>
+            </div>
+          <div class="text-center">
+            <h2 id="bass">BASS</h2>
+          </div>
+          <div id="trebleControl">
+            <div class="row">
+              <div class="col-sm-6 text-right my-auto">
+                <h2 id="treble">TREBLE</h2>
+              </div>
+              <div class="col-sm-3 text-center">
+                <div>
+                  <img src="images/upSwipe" alt="icon for higher volume">
+                </div>
+                <div class="outline">
+                  <div id="trebleBar"></div>
+                </div>
+                <div>
+                  <img src="images/downSwipe" alt="icon for lower volume">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clockSettingsPage">
+        <div class="text-center">
+          <h2 id="clockSetting">00:00 PM</h2>
+        </div>
+      </section>
+
 
       <!-- bottom two nav items -->
       <div class="contBottom">
@@ -175,6 +240,9 @@
       <!--leap.js is the script that makes it a lot easier to get all the data and runs the api-->
       <script src="js/leap.js"></script>
       <script src="js/fMotion.js"></script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHcYlNoLasRKBgTiSB3MdKcODsOzjpq_I&callback=initMap">
+    </script>
   </body>
 </main>
 </html>
