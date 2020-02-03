@@ -72,7 +72,7 @@ $(document).ready(function(){
     $("#navigationPage").show();
     $("#climatePage, #audioPage, #settingsPage").hide();
     var theZoom = 10;
-    var locationRio = {lat: -22.915, lng: -43.197};
+    var locationRio = {lat: 40.007718, lng: -105.269740};
     var map = new google.maps.Map(document.getElementById("navigationMap"), {
           zoom: theZoom,
           center: locationRio,
